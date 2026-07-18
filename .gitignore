@@ -1,0 +1,9 @@
+# Vivado generated files
+zedy.cache/
+zedy.hw/
+zedy.ip_user_files/
+zedy.runs/
+zedy.sim/
+zedy.gen/
+# Simulation generated files
+**/simulation/

@@ -1,0 +1,719 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9AFDC7EEF74002A1",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../zedy.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "top_module_1": "",
+      "CLOCK_DIV_0": "",
+      "blk_mem_gen_happy": "",
+      "xlconstant_0": "",
+      "xlconstant_1": "",
+      "blk_mem_gen_sad": "",
+      "mux_module_0": "",
+      "blk_mem_gen_hungry": "",
+      "blk_mem_gen_sleepy": "",
+      "blk_mem_gen_sleeping": "",
+      "blk_mem_gen_wait_food": "",
+      "oled_rgb_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "sonar_pulse": {
+        "direction": "I"
+      },
+      "oled_cs_n": {
+        "direction": "O"
+      },
+      "oled_mosi": {
+        "direction": "O"
+      },
+      "oled_dc": {
+        "direction": "O"
+      },
+      "oled_rst_n": {
+        "type": "rst",
+        "direction": "O",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "oled_vbatc": {
+        "direction": "O"
+      },
+      "oled_vddc": {
+        "direction": "O"
+      },
+      "leds_o": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "kypd_r4": {
+        "direction": "I"
+      },
+      "kypd_r3": {
+        "direction": "I"
+      },
+      "kypd_r2": {
+        "direction": "I"
+      },
+      "kypd_r1": {
+        "direction": "I"
+      },
+      "kypd_c4": {
+        "direction": "O"
+      },
+      "kypd_c3": {
+        "direction": "O"
+      },
+      "kypd_c2": {
+        "direction": "O"
+      },
+      "kypd_c1": {
+        "direction": "O"
+      },
+      "sonar_rx": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "oled_sclk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_CLOCK_DIV_0_0_out_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "top_module_1": {
+        "vlnv": "xilinx.com:module_ref:top_module:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_top_module_1_0",
+        "xci_path": "ip/design_1_top_module_1_0/design_1_top_module_1_0.xci",
+        "inst_hier_path": "top_module_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "top_module",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "kypd_c4": {
+            "direction": "O"
+          },
+          "kypd_c3": {
+            "direction": "O"
+          },
+          "kypd_c2": {
+            "direction": "O"
+          },
+          "kypd_c1": {
+            "direction": "O"
+          },
+          "kypd_r4": {
+            "direction": "I"
+          },
+          "kypd_r3": {
+            "direction": "I"
+          },
+          "kypd_r2": {
+            "direction": "I"
+          },
+          "kypd_r1": {
+            "direction": "I"
+          },
+          "sonar_pulse": {
+            "direction": "I"
+          },
+          "leds_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "current_state_o": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          }
+        }
+      },
+      "CLOCK_DIV_0": {
+        "vlnv": "user.org:user:CLOCK_DIV:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_CLOCK_DIV_0_0",
+        "xci_path": "ip/design_1_CLOCK_DIV_0_0/design_1_CLOCK_DIV_0_0.xci",
+        "inst_hier_path": "CLOCK_DIV_0",
+        "parameters": {
+          "IN_CLK_F": {
+            "value": "100000000"
+          },
+          "OUT_CLK_F": {
+            "value": "5000000"
+          }
+        }
+      },
+      "blk_mem_gen_happy": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_0_0",
+        "xci_path": "ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_happy",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../new/happy.coe"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "6144"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "design_1_xlconstant_1_0",
+        "xci_path": "ip/design_1_xlconstant_1_0/design_1_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1"
+      },
+      "blk_mem_gen_sad": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_1_1",
+        "xci_path": "ip/design_1_blk_mem_gen_1_1/design_1_blk_mem_gen_1_1.xci",
+        "inst_hier_path": "blk_mem_gen_sad",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../new/sad.coe"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "6144"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "mux_module_0": {
+        "vlnv": "xilinx.com:module_ref:mux_module:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_mux_module_0_0",
+        "xci_path": "ip/design_1_mux_module_0_0/design_1_mux_module_0_0.xci",
+        "inst_hier_path": "mux_module_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux_module",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "current_state": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "image_happy": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "image_hungry": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "image_sleepy": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "image_sleeping": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "image_wait_food": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "image_sad": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "data_o": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "blk_mem_gen_hungry": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_sad_0",
+        "xci_path": "ip/design_1_blk_mem_gen_sad_0/design_1_blk_mem_gen_sad_0.xci",
+        "inst_hier_path": "blk_mem_gen_hungry",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../new/hungry.coe"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "6144"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_sleepy": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_hungry_0",
+        "xci_path": "ip/design_1_blk_mem_gen_hungry_0/design_1_blk_mem_gen_hungry_0.xci",
+        "inst_hier_path": "blk_mem_gen_sleepy",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../new/sleepy.coe"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "6144"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_sleeping": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_hungry_1",
+        "xci_path": "ip/design_1_blk_mem_gen_hungry_1/design_1_blk_mem_gen_hungry_1.xci",
+        "inst_hier_path": "blk_mem_gen_sleeping",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../new/sleeping.coe"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "6144"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_wait_food": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "design_1_blk_mem_gen_hungry_2",
+        "xci_path": "ip/design_1_blk_mem_gen_hungry_2/design_1_blk_mem_gen_hungry_2.xci",
+        "inst_hier_path": "blk_mem_gen_wait_food",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../new/waiting_for_food.coe"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Simple_Dual_Port_RAM"
+          },
+          "Write_Depth_A": {
+            "value": "6144"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "oled_rgb_0": {
+        "vlnv": "eis:user:oled_rgb:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_oled_rgb_0_3",
+        "xci_path": "ip/design_1_oled_rgb_0_3/design_1_oled_rgb_0_3.xci",
+        "inst_hier_path": "oled_rgb_0"
+      }
+    },
+    "nets": {
+      "CLOCK_DIV_0_out_clk": {
+        "ports": [
+          "CLOCK_DIV_0/out_clk",
+          "oled_sclk",
+          "blk_mem_gen_happy/clkb",
+          "blk_mem_gen_sad/clkb",
+          "blk_mem_gen_wait_food/clkb",
+          "blk_mem_gen_hungry/clkb",
+          "blk_mem_gen_sleepy/clkb",
+          "blk_mem_gen_sleeping/clkb",
+          "oled_rgb_0/sclk"
+        ]
+      },
+      "blk_mem_gen_0_doutb": {
+        "ports": [
+          "blk_mem_gen_happy/doutb",
+          "mux_module_0/image_happy"
+        ]
+      },
+      "blk_mem_gen_1_doutb": {
+        "ports": [
+          "blk_mem_gen_sad/doutb",
+          "mux_module_0/image_sad"
+        ]
+      },
+      "blk_mem_gen_hungry_doutb": {
+        "ports": [
+          "blk_mem_gen_hungry/doutb",
+          "mux_module_0/image_hungry"
+        ]
+      },
+      "blk_mem_gen_sleeping_doutb": {
+        "ports": [
+          "blk_mem_gen_sleeping/doutb",
+          "mux_module_0/image_sleeping"
+        ]
+      },
+      "blk_mem_gen_sleepy_doutb": {
+        "ports": [
+          "blk_mem_gen_sleepy/doutb",
+          "mux_module_0/image_sleepy"
+        ]
+      },
+      "blk_mem_gen_wait_food_doutb": {
+        "ports": [
+          "blk_mem_gen_wait_food/doutb",
+          "mux_module_0/image_wait_food"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "CLOCK_DIV_0/in_clk",
+          "top_module_1/clk",
+          "oled_rgb_0/clk"
+        ]
+      },
+      "kypd_r1_1": {
+        "ports": [
+          "kypd_r1",
+          "top_module_1/kypd_r1"
+        ]
+      },
+      "kypd_r2_1": {
+        "ports": [
+          "kypd_r2",
+          "top_module_1/kypd_r2"
+        ]
+      },
+      "kypd_r3_1": {
+        "ports": [
+          "kypd_r3",
+          "top_module_1/kypd_r3"
+        ]
+      },
+      "kypd_r4_1": {
+        "ports": [
+          "kypd_r4",
+          "top_module_1/kypd_r4"
+        ]
+      },
+      "mux_module_0_data_o": {
+        "ports": [
+          "mux_module_0/data_o",
+          "oled_rgb_0/data_i"
+        ]
+      },
+      "oled_rgb_0_cs_n": {
+        "ports": [
+          "oled_rgb_0/cs_n",
+          "oled_cs_n"
+        ]
+      },
+      "oled_rgb_0_dc_out": {
+        "ports": [
+          "oled_rgb_0/dc_out",
+          "oled_dc"
+        ]
+      },
+      "oled_rgb_0_mosi": {
+        "ports": [
+          "oled_rgb_0/mosi",
+          "oled_mosi"
+        ]
+      },
+      "oled_rgb_0_pmod_en_o": {
+        "ports": [
+          "oled_rgb_0/pmod_en_o",
+          "oled_vddc"
+        ]
+      },
+      "oled_rgb_0_rst_o": {
+        "ports": [
+          "oled_rgb_0/rst_o",
+          "oled_rst_n"
+        ]
+      },
+      "oled_rgb_0_vcc_en_o": {
+        "ports": [
+          "oled_rgb_0/vcc_en_o",
+          "oled_vbatc"
+        ]
+      },
+      "rgb_oled_0_addr_o_0": {
+        "ports": [
+          "oled_rgb_0/addr_o",
+          "blk_mem_gen_happy/addrb",
+          "blk_mem_gen_sad/addrb",
+          "blk_mem_gen_sleeping/addrb",
+          "blk_mem_gen_wait_food/addrb",
+          "blk_mem_gen_hungry/addrb",
+          "blk_mem_gen_sleepy/addrb"
+        ]
+      },
+      "rst_n_1": {
+        "ports": [
+          "rst_n",
+          "CLOCK_DIV_0/rst_n",
+          "top_module_1/rst_n",
+          "oled_rgb_0/rst_n"
+        ]
+      },
+      "sonar_pulse_1": {
+        "ports": [
+          "sonar_pulse",
+          "top_module_1/sonar_pulse"
+        ]
+      },
+      "top_module_1_current_state_o": {
+        "ports": [
+          "top_module_1/current_state_o",
+          "mux_module_0/current_state"
+        ]
+      },
+      "top_module_1_kypd_c1": {
+        "ports": [
+          "top_module_1/kypd_c1",
+          "kypd_c1"
+        ]
+      },
+      "top_module_1_kypd_c2": {
+        "ports": [
+          "top_module_1/kypd_c2",
+          "kypd_c2"
+        ]
+      },
+      "top_module_1_kypd_c3": {
+        "ports": [
+          "top_module_1/kypd_c3",
+          "kypd_c3"
+        ]
+      },
+      "top_module_1_kypd_c4": {
+        "ports": [
+          "top_module_1/kypd_c4",
+          "kypd_c4"
+        ]
+      },
+      "top_module_1_leds_o": {
+        "ports": [
+          "top_module_1/leds_o",
+          "leds_o"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "sonar_rx"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "blk_mem_gen_happy/enb",
+          "blk_mem_gen_sad/enb",
+          "blk_mem_gen_hungry/enb",
+          "blk_mem_gen_sleeping/enb",
+          "blk_mem_gen_wait_food/enb",
+          "blk_mem_gen_sleepy/enb"
+        ]
+      }
+    }
+  }
+}
